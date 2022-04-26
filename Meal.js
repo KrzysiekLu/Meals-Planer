@@ -29,7 +29,7 @@ export class Meal {
 
       //Creating delete button for ingredients
       let deleteBtn = document.createElement("button");
-      deleteBtn.textContent = `X`;
+      deleteBtn.textContent = `${i}`;
       deleteBtn.dataset.index = this.btnindex;
 
       ingredientBox.insertAdjacentElement("beforeend", deleteBtn);
@@ -43,6 +43,7 @@ export class Meal {
     meal.ingredients.splice(e.target.dataset.index, 1);
     console.log(e.target.dataset.index);
     console.log(meal.ingredients);
+    this.renderingredients();
   }
 
   clearInputs() {
