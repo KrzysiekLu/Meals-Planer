@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="create-new-meal">
+      <div class="create-new-meal_main-data-container">
+        <label for="meal-name">Nzwa potrawy</label>
+        <input class="meal-name" type="text" />
+      </div>
+
+      <div class="create-new-meal_ingredients-container">
+        <div class="ingredient ingredient-name">
+          <label for="ingredient-name_input">Nazwa Składnika</label>
+          <input class="ingredient-name_input" type="text" />
+        </div>
+        <div class="ingredient ingredient-amount">
+          <label for="ingredient-amount_input">Ilość</label>
+          <input class="ingredient-amount_input" type="number" />
+        </div>
+        <div class="ingredient ingredient-unit">
+          <label for="ingredient-unit_input">Jednostka</label>
+          <input list="units" class="ingredient-unit_input" type="text" />
+          <datalist id="units">
+            <option value="kg"></option>
+            <option value="g"></option>
+            <option value="l"></option>
+            <option value="ml"></option>
+            <option value="szt"></option>
+          </datalist>
+        </div>
+
+        <button class="add-ingredient">Dodaj składnik</button>
+      </div>
+      <div class="create-new-meal_output"></div>
+      <button class="save-meal">ZAPISZ POSIŁEK</button>
+    </section>
+    <script src="App.js" type="module"></script>
+  </body>
+</html>
